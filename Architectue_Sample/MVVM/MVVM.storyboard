@@ -31,7 +31,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="3Bg-S3-PF8"/>
                     <connections>
-                        <outlet property="contentView" destination="qPC-Nt-i6D" id="wXt-r0-qSG"/>
+                        <outlet property="contentView" destination="qPC-Nt-i6D" id="jFp-3K-Pg7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fN7-Yi-rj8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -41,7 +41,7 @@
         <!--Contents View Controller-->
         <scene sceneID="qFi-yu-GWF">
             <objects>
-                <viewController id="ub6-Hd-yyb" customClass="MVVMContentsViewController" customModule="MVVM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MVVMContentsViewController" id="ub6-Hd-yyb" customClass="MVVMContentsViewController" customModule="MVVM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U9G-tV-yM5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,6 +60,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0Oh-uU-1Of"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Wg1-Xn-5lV" id="LUj-ec-ki1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C3V-40-rvw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

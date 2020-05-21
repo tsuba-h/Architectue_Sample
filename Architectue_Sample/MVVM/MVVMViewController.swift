@@ -8,6 +8,8 @@
 
 import UIKit
 import Parchment
+import Instantiate
+import InstantiateStandard
 
 protocol PagingDelegate {
     func openPage(title: String)
@@ -49,14 +51,14 @@ extension MVVMViewController: PagingViewControllerDelegate {
 }
 
 struct PagingMenuOptinons {
-    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let storyboard = UIStoryboard(name: "MVVM", bundle: nil)
     
     var pagingControllers: [UIViewController] {
         
         var controllers: [UIViewController] = []
         let items = ["swift", "kotlin", "php", "Python", "C#", "Unity"]
         items.forEach { (tag) in
-            let controller = storyboard.instantiateViewController(identifier: "FirstViewController") as! MVVMContentsViewController
+            let controller = storyboard.instantiateViewController(identifier: "MVVMContentsViewController") as! MVVMContentsViewController
             controller.title = tag
             controller.query = tag
             controllers.append(controller)

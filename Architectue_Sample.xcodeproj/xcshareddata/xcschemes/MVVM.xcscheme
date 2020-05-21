@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2F5836A32476E61E0056E2E5"
+               BlueprintIdentifier = "2F59FB0C2476ED0E000C234C"
                BuildableName = "MVVM.app"
                BlueprintName = "MVVM"
                ReferencedContainer = "container:Architectue_Sample.xcodeproj">
@@ -44,7 +44,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2F5836A32476E61E0056E2E5"
+            BlueprintIdentifier = "2F59FB0C2476ED0E000C234C"
             BuildableName = "MVVM.app"
             BlueprintName = "MVVM"
             ReferencedContainer = "container:Architectue_Sample.xcodeproj">
@@ -61,7 +61,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2F5836A32476E61E0056E2E5"
+            BlueprintIdentifier = "2F59FB0C2476ED0E000C234C"
             BuildableName = "MVVM.app"
             BlueprintName = "MVVM"
             ReferencedContainer = "container:Architectue_Sample.xcodeproj">
