@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parchment
 
 protocol PagingDelegate {
     func openPage(title: String)
@@ -39,11 +40,11 @@ class MVVMViewController: UIViewController {
     }
 }
 
-extension TopViewController: PagingViewControllerDelegate {
+extension MVVMViewController: PagingViewControllerDelegate {
     func pagingViewController(_ pagingViewController: PagingViewController, didScrollToItem pagingItem: PagingItem, startingViewController: UIViewController?, destinationViewController: UIViewController, transitionSuccessful: Bool) {
         guard let indexItem = pagingViewController.state.currentPagingItem as? PagingIndexItem else {return}
         print("pagingDelegate:発火",indexItem.title)
-        TopViewController.self.delegate?.openPage(title: indexItem.title)
+        MVVMViewController.self.delegate?.openPage(title: indexItem.title)
     }
 }
 
@@ -55,7 +56,7 @@ struct PagingMenuOptinons {
         var controllers: [UIViewController] = []
         let items = ["swift", "kotlin", "php", "Python", "C#", "Unity"]
         items.forEach { (tag) in
-            let controller = storyboard.instantiateViewController(identifier: "FirstViewController") as! ContentsViewController
+            let controller = storyboard.instantiateViewController(identifier: "FirstViewController") as! MVVMContentsViewController
             controller.title = tag
             controller.query = tag
             controllers.append(controller)

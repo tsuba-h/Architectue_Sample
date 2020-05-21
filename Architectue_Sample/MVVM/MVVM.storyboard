@@ -38,6 +38,33 @@
             </objects>
             <point key="canvasLocation" x="1079.7101449275362" y="-348.21428571428572"/>
         </scene>
+        <!--Contents View Controller-->
+        <scene sceneID="qFi-yu-GWF">
+            <objects>
+                <viewController id="ub6-Hd-yyb" customClass="MVVMContentsViewController" customModule="MVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U9G-tV-yM5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wg1-Xn-5lV">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Wg1-Xn-5lV" firstAttribute="leading" secondItem="0Oh-uU-1Of" secondAttribute="leading" id="6dK-jy-8UD"/>
+                            <constraint firstItem="0Oh-uU-1Of" firstAttribute="bottom" secondItem="Wg1-Xn-5lV" secondAttribute="bottom" id="9sa-ya-gzy"/>
+                            <constraint firstItem="Wg1-Xn-5lV" firstAttribute="top" secondItem="0Oh-uU-1Of" secondAttribute="top" id="F3o-hB-Pau"/>
+                            <constraint firstItem="0Oh-uU-1Of" firstAttribute="trailing" secondItem="Wg1-Xn-5lV" secondAttribute="trailing" id="SwL-KI-AB9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0Oh-uU-1Of"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C3V-40-rvw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1963" y="-353"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="aGl-A7-ElB">
             <objects>
