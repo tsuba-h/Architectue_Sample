@@ -14,10 +14,25 @@
                     <view key="view" contentMode="scaleToFill" id="6ry-bt-mfg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qPC-Nt-i6D">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="32c-xV-KeI" firstAttribute="trailing" secondItem="qPC-Nt-i6D" secondAttribute="trailing" id="O7S-Vs-LSh"/>
+                            <constraint firstItem="32c-xV-KeI" firstAttribute="bottom" secondItem="qPC-Nt-i6D" secondAttribute="bottom" id="XJe-f9-lNO"/>
+                            <constraint firstItem="qPC-Nt-i6D" firstAttribute="top" secondItem="32c-xV-KeI" secondAttribute="top" id="fQC-TQ-ubP"/>
+                            <constraint firstItem="qPC-Nt-i6D" firstAttribute="leading" secondItem="32c-xV-KeI" secondAttribute="leading" id="sXv-uu-eQe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="32c-xV-KeI"/>
                     </view>
                     <navigationItem key="navigationItem" id="3Bg-S3-PF8"/>
+                    <connections>
+                        <outlet property="contentView" destination="qPC-Nt-i6D" id="wXt-r0-qSG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fN7-Yi-rj8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

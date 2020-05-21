@@ -8,23 +8,58 @@
 
 import UIKit
 
-class MVVMViewController: UIViewController {
+protocol PagingDelegate {
+    func openPage(title: String)
+}
 
+
+class MVVMViewController: UIViewController {
+    
+    @IBOutlet weak var contentView: UIView!
+    let paging = PagingMenuOptinons()
+    static var delegate: PagingDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("MVVM")
-        // Do any additional setup after loading the view.
+        setUpPaging()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func setUpPaging() {
+        let pagingViewController = PagingViewController(viewControllers: paging.pagingControllers)
+        pagingViewController.delegate = self
+        addChild(pagingViewController)
+        view.insertSubview(pagingViewController.view, at: 1)
+        pagingViewController.didMove(toParent: self)
+        pagingViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        pagingViewController.view.widthAnchor.constraint(equalToConstant: self.view.bounds.width).isActive = true
+        pagingViewController.view.heightAnchor.constraint(equalToConstant: self.contentView.bounds.height).isActive = true
+        pagingViewController.view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
     }
-    */
+}
 
+extension TopViewController: PagingViewControllerDelegate {
+    func pagingViewController(_ pagingViewController: PagingViewController, didScrollToItem pagingItem: PagingItem, startingViewController: UIViewController?, destinationViewController: UIViewController, transitionSuccessful: Bool) {
+        guard let indexItem = pagingViewController.state.currentPagingItem as? PagingIndexItem else {return}
+        print("pagingDelegate:発火",indexItem.title)
+        TopViewController.self.delegate?.openPage(title: indexItem.title)
+    }
+}
+
+struct PagingMenuOptinons {
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    
+    var pagingControllers: [UIViewController] {
+        
+        var controllers: [UIViewController] = []
+        let items = ["swift", "kotlin", "php", "Python", "C#", "Unity"]
+        items.forEach { (tag) in
+            let controller = storyboard.instantiateViewController(identifier: "FirstViewController") as! ContentsViewController
+            controller.title = tag
+            controller.query = tag
+            controllers.append(controller)
+        }
+        return controllers
+    }
 }
