@@ -11,6 +11,7 @@ import UIKit
 class MVPViewController: UIViewController {
     
     private var presenter = Presenter()
+    private var refControl = UIRefreshControl()
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -19,9 +20,18 @@ class MVPViewController: UIViewController {
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
         tableView.delegate = self
         tableView.dataSource = self
+        refControl.addTarget(self, action: #selector(valueChange(sender:)), for: .valueChanged)
+        tableView.refreshControl = refControl
         
-        presenter.fetch {
+        presenter.fetch(query: "swift") {
             self.tableView.reloadData()
+        }
+    }
+    
+    @objc func valueChange(sender: UIRefreshControl) {
+        presenter.fetch(query: "kotlin") {
+            self.tableView.reloadData()
+            self.refControl.endRefreshing()
         }
     }
 }

@@ -12,8 +12,8 @@ final class Presenter {
     let model = QiitaRepository()
     var item = [QiitaItem]()
     
-    func fetch(completion: @escaping () -> Void) {
-        model.jsonQiita(query: "swift", success: { [weak self] items in
+    func fetch(query: String, completion: @escaping () -> Void) {
+        model.jsonQiita(query: query, success: { [weak self] items in
             self?.item = items
             completion()
         }) { (error) in
