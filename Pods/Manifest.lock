@@ -11,6 +11,11 @@ PODS:
     - Moya/Core
     - RxSwift (~> 4.0)
   - Parchment (2.0.1)
+  - Realm (4.3.2):
+    - Realm/Headers (= 4.3.2)
+  - Realm/Headers (4.3.2)
+  - RealmSwift (4.3.2):
+    - Realm (= 4.3.2)
   - Result (4.1.0)
   - RxCocoa (4.5.0):
     - RxSwift (>= 4.4.2, ~> 4.4)
@@ -25,6 +30,7 @@ DEPENDENCIES:
   - InstantiateStandard
   - Moya/RxSwift (~> 13.0)
   - Parchment
+  - RealmSwift
   - RxCocoa (~> 4.0)
   - RxDataSources (~> 3.1.0)
   - RxSwift (~> 4.0)
@@ -37,6 +43,8 @@ SPEC REPOS:
     - InstantiateStandard
     - Moya
     - Parchment
+    - Realm
+    - RealmSwift
     - Result
     - RxCocoa
     - RxDataSources
@@ -49,11 +57,13 @@ SPEC CHECKSUMS:
   InstantiateStandard: 18ab1417ba787113350c71a5b2251f0b4448be67
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   Parchment: 00cb7d0d0a38f5a4a7e089ec59637b970a58c0f0
+  Realm: 5e92902e2875dff4bb0fd02f67bb737c3d5db2bc
+  RealmSwift: 9a360fc7bae04fc2e308a34fbd899d5faa2d6b22
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
 
-PODFILE CHECKSUM: c47c9292cfd92cc88c1a83d39216efd5e491fe73
+PODFILE CHECKSUM: 7d874a081d2c861c759a9b088e6cba954cdfe848
 
 COCOAPODS: 1.8.3

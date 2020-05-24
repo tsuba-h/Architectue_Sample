@@ -11,6 +11,7 @@ target 'Architectue_Sample' do
   pod 'Instantiate'
   pod 'InstantiateStandard'
   pod 'Parchment'
+  pod 'RealmSwift'
   # Pods for Architectue_Sample
   
 end

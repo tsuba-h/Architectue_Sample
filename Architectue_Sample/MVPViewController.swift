@@ -46,6 +46,8 @@ extension MVPViewController: UITableViewDelegate, UITableViewDataSource {
         cell.label.text = presenter.item[indexPath.row].title
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(presenter.item[indexPath.row].url)
+    }
     
 }
